@@ -1,4 +1,12 @@
 function TweetList() {
+  const tweet = {
+    avatar: "https://i.imgur.com/73hZDYK.png",
+    firstName: "Newton",
+    lastName: "Sir Isaac",
+    handle: "@SirIsaac",
+    body: "If I have seen further it is by standing on the shoulders of giants",
+    age: "10 days ago"
+  };
   return (
     <main className="tweetsContainer">
       <section className="tweets">
@@ -6,23 +14,22 @@ function TweetList() {
           <header className="tweet--header">
             <img
               className="tweet--avatar"
-              src="https://i.imgur.com/73hZDYK.png"
+              src={tweet.avatar}
               alt="tweet avatar"
             />
-            <h2 className="tweet--name">Newton</h2>
-            <small className="tweet--handle">@SirIsaac</small>
+            <h2 className="tweet--name">{tweet.firstName}</h2>
+            <small className="tweet--handle">{tweet.handle}</small>
           </header>
 
           <div className="tweet--body">
             <p>
-              If I have seen further it is by standing on the shoulders of
-              giants
+              {tweet.body}
             </p>
           </div>
 
           <footer className="tweet--footer">
             <small className="footer--age">
-              10 days ago
+              {tweet.age}
               <small>
                 <span className="footer--actions">
                   <a href="#">
@@ -47,17 +54,17 @@ function TweetList() {
               src="https://i.imgur.com/nlhLi3I.png"
               alt="tweet avatar"
             />
-            <h2 className="tweet--name">Descartes</h2>
-            <small className="tweet--handle">@rd</small>
+            <h2 className="tweet--name">{tweet.firstName}</h2>
+            <small className="tweet--handle">{tweet.handle}</small>
           </header>
 
           <div className="tweet--body">
-            <p>Je pense , donc je suis</p>
+            <p>{tweet.body}</p>
           </div>
 
           <footer className="tweet--footer">
             <small className="footer--age">
-              10 days ago
+              {tweet.age}
               <small>
                 <span className="footer--actions">
                   <a href="#">
